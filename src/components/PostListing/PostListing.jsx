@@ -29,6 +29,9 @@ const getPostList = (postEdges, authorEdges) =>
 class PostListing extends React.Component {
   render() {
     const { postEdges, postAuthors } = this.props;
+    if(postEdges === undefined){
+      return null
+    }
     const postList = getPostList(postEdges, postAuthors);
 
     return (
