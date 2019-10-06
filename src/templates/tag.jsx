@@ -47,7 +47,7 @@ class TagTemplate extends React.Component {
   render() {
     const {
       location,
-      data: { authors },
+      data: { authors },nodes,
       pageContext: { tag, page, pages, total, limit, prev, next }
     } = this.props;
     const { menuOpen } = this.state;
@@ -88,7 +88,7 @@ class TagTemplate extends React.Component {
                 limit={limit}
                 prev={prev}
                 next={next}
-              >
+              > 
                 {/* PostListing component renders all the posts */}
                 <PostListing postEdges={nodes} postAuthors={authors.edges} />
               </PaginatedContent>
